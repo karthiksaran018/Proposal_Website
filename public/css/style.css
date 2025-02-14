@@ -1,0 +1,207 @@
+/* Global styles */
+body {
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Background Gradient Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Floating Heart Emojis */
+.emoji-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.emoji {
+    position: absolute;
+    font-size: 2.5rem;
+    animation: floatEmojis 5s ease-in-out infinite;
+    opacity: 0;
+}
+
+/* Emoji Floating Animation */
+@keyframes floatEmojis {
+    0% { transform: translateY(100px); opacity: 1; }
+    50% { transform: translateY(-100px) rotate(20deg); opacity: 0.7; }
+    100% { transform: translateY(100px); opacity: 1; }
+}
+
+/* Container */
+.container {
+    text-align: center;
+    padding: 10px;
+    max-width: 90%;
+}
+
+/* Banner */
+.banner-gif img {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#no-button, #yes-button {
+    margin: 0 10px;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#no-button {
+    background-color: red;
+}
+
+#yes-button {
+    background-color: green;
+}
+
+/* Hover Effects */
+#no-button:hover, #yes-button:hover {
+    transform: scale(1.1);
+}
+
+/* Floating "No" Button */
+.moving {
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+/* Confetti Effect */
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from { transform: translateY(-50px); }
+    to { transform: translateY(100vh); }
+}
+
+/* Floating Heart Emojis */
+.emoji {
+    position: absolute;
+    font-size: 2.5rem;
+    animation: floatEmojis 5s ease-in-out infinite;
+    opacity: 0;
+}
+
+/* Emoji Floating Animation */
+@keyframes floatEmojis {
+    0% { transform: translateY(100px); opacity: 1; }
+    50% { transform: translateY(-100px) rotate(20deg); opacity: 0.7; }
+    100% { transform: translateY(100px); opacity: 1; }
+}
+
+
+/* Success Message */
+.message {
+    display: none;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Creator Info */
+.creator {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.creator a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.creator a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #no-button, #yes-button {
+        width: 80%;
+        font-size: 18px;
+    }
+}
+
+
+/* Creator Info */
+.creator {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.creator a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.creator a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #no-button, #yes-button {
+        width: 80%;
+        font-size: 18px;
+    }
+}
